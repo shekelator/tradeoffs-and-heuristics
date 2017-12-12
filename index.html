@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/beige.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h1>Tradeoffs and Heuristics</h1>
+					<h4>or,</h4>
+					<h2>Is there such a thing as "bad code"?</h2>
+				</section>
+				<section>
+					<h3>Code is just code</h3>
+					<p>There's nothing good or bad about it. When we talk about bad code, we're really saying something like,</p>
+					<ul>
+						<li class="fragment">Inappropriate</li>
+						<li class="fragment">Non-standard</li>
+						<li class="fragment">Not easily testable</li>
+						<li class="fragment">Inefficient</li>
+						<li class="fragment">"I would have done it differently"</li>
+					</ul>
+				</section>
+				<section>
+					<h3>"Bad code"</h3>
+					<h3><span class="fragment">==</span><span class="fragment">=</span></h3>
+					<h3 class="fragment"> "I don't like your tradeoffs" </h3>
+				</section>
+				<section>
+					<h3>Because we're always trading something!</h3>
+					<ul>
+						<li class="fragment">Time</li>
+						<li class="fragment">Experience (required to write)</li>
+						<li class="fragment">Readability</li>
+						<li class="fragment">Consistency</li>
+						<li class="fragment">Testability</li>
+						<li class="fragment">Efficiency</li>
+						<li class="fragment">Disk space</li>
+					</ul>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
